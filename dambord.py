@@ -7,6 +7,7 @@ color = ['black', 'white']
 colorIndex = 0
 Row = 0
 root.resizable(False, False)
+root.title('Dambord')
 
 def generator(count,rowCount):
     global colorIndex
