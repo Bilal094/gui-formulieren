@@ -11,7 +11,7 @@ root.resizable(False, False)
 def generator(count,rowCount):
     global colorIndex
     label = Label(bg=color[colorIndex])
-    label.grid(column=count,row=rowCount, ipadx=50,ipady=65)
+    label.grid(column=count,row=rowCount, ipadx=50,ipady=50)
     if colorIndex == 0:
         colorIndex = 1
     else:
