@@ -24,8 +24,11 @@ def player2():
         root2.title('Raad het woord - Speler 2')
         root2.resizable(False, False)
         
+<<<<<<< HEAD
         for spinBoxCount in range(len(word)):
             spinBox = ttk.Spinbox(root2, values=word).pack()
+=======
+>>>>>>> c193ccb2518dae7929ada9cdc345fd7469d7db7a
 
 
         root2.mainloop()
