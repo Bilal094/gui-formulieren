@@ -23,9 +23,6 @@ def calculate():
     year = int(yearSelect.get())
     month = monthSelect.get()
     day = int(daySelect.get())
-    print(dateToday.strftime("%Y"))
-    print(dateToday.strftime("%b"))
-    print(dateToday.strftime("%d"))
     if year == int(dateToday.strftime("%Y")) and month == dateToday.strftime("%b") and day == int(dateToday.strftime("%d")):
         showinfo('Days to date calculator', 'Dit is vandaag')
     else:
