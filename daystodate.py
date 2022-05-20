@@ -21,12 +21,15 @@ def dayToMonth(event):
 
 def calculate():
     year = int(yearSelect.get())
-    month = datetime.strptime(monthSelect.get(),"%b")
+    month = monthSelect.get()
     day = int(daySelect.get())
+    print(dateToday.strftime("%Y"))
+    print(dateToday.strftime("%b"))
+    print(dateToday.strftime("%d"))
     if year == int(dateToday.strftime("%Y")) and month == dateToday.strftime("%b") and day == int(dateToday.strftime("%d")):
         showinfo('Days to date calculator', 'Dit is vandaag')
     else:
-        newDate = datetime(year,month.month,day)
+        newDate = datetime(year,datetime.strptime(monthSelect.get(),"%b").month,day)
         dateExpression = abs(newDate-dateToday)
         dateList.append(str(dateExpression))
         for x in dateList:
