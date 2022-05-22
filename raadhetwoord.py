@@ -1,16 +1,20 @@
 import tkinter as tk
 from tkinter import *
 from tkinter.messagebox import showinfo
-from tkinter import ttk
+import string
+import random
 
 root1 = tk.Tk()
 root1.geometry('450x350')
 root1.title('Raad het woord - Speler 1')
 root1.resizable(False,False)
 wordEntry = StringVar()
+letters = string.ascii_lowercase
 
 def player2():
     word = wordEntry.get()
+    score = len(word) * len(word)
+
     if len(word) > 0 and len(word) < 4:
         showinfo('Fout', 'Jouw woord heeft minder dan 4 letters!')
     elif len(word) > 7:
@@ -23,12 +27,13 @@ def player2():
         root2.geometry('550x350')
         root2.title('Raad het woord - Speler 2')
         root2.resizable(False, False)
-        
-<<<<<<< HEAD
+
+        Xpos = 100
+        Ypos = 200
         for spinBoxCount in range(len(word)):
-            spinBox = ttk.Spinbox(root2, values=word).pack()
-=======
->>>>>>> c193ccb2518dae7929ada9cdc345fd7469d7db7a
+            spinBox = tk.Spinbox(root2, values=[random.choice(letters) for i in range(4)], wrap=True).place(x=Xpos,y=Ypos)
+            Xpos =+ 150
+        
 
 
         root2.mainloop()
